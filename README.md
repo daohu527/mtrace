@@ -54,4 +54,7 @@ We solved the problem, can we have such a solution, we can find d and e through 
 4. The logger get the trace_id from the holder, print log with trace_id
 
 **"traceid" is saved in the message and passed to the next routine.**  
+
+## Logger
+If the logger is called by the coroutine, how to use threadlocal to achieve the uniformity of trace_id? When node is not concurrent, it seems that it can be directly implemented with threadlocal.  
  
