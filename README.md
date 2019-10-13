@@ -42,9 +42,10 @@ d   e  f
 We just trace the e-b-a branch(we can just trace the main tree), and the trace id in e-b-a is the same, the the module in e,b,a are with the some id in log, we can trace the progress in a,b,e.   
 Still if we new a thread, the trace id will be loss.  
 
+**The root of the topic cannot be a child of 2 branches at the same time.**  
+
 We solved the problem, can we have such a solution, we can find d and e through b, so that we can track the whole tree.  
 
-**The root of the topic cannot be a child of 2 branches at the same time.**  
 
 ## The process
 1. The root node generate a trace_id.  
@@ -52,5 +53,5 @@ We solved the problem, can we have such a solution, we can find d and e through 
 3. The child node put the trace_id in trace_id holder.  
 4. The logger get the trace_id from the holder, print log with trace_id
 
-> "traceid" is saved in the message and passed to the next routine.  
+**"traceid" is saved in the message and passed to the next routine.**  
  
